@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:insta_clone2/feed_screen.dart';
+import 'package:insta_clone2/screens/feed_screen.dart';
+import 'package:insta_clone2/screens/profile_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -14,10 +15,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<BottomNavigationBarItem> btmNavItems = [
     BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-    BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-    BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-    BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-    BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+    BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
+    BottomNavigationBarItem(icon: Icon(Icons.add), label: ""),
+    BottomNavigationBarItem(icon: Icon(Icons.healing), label: ""),
+    BottomNavigationBarItem(icon: Icon(Icons.account_circle), label: ""),
   ];
 
   int _selectedIndex = 0;
@@ -33,9 +34,7 @@ class _HomePageState extends State<HomePage> {
     Container(
       color: Colors.blue,
     ),
-    Container(
-      color: Colors.black,
-    ),
+    ProfileScreen(),
   ];
 
   @override
